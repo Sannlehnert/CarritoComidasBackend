@@ -33,7 +33,8 @@ const testConnection = async () => {
     if (error.code === 'ER_ACCESS_DENIED_ERROR') {
       logger.info('💡 Solución: Verifica el usuario y contraseña en el archivo .env');
     } else if (error.code === 'ER_BAD_DB_ERROR') {
-      logger.info(`💡 Solución: La base de datos '${poolConfig.database}' no existe. Créala manualmente.`);
+      logger.info(`💡 La base de datos '${poolConfig.database}' no existe - será creada automáticamente al iniciar.`);
+
     } else if (error.code === 'ECONNREFUSED') {
       logger.info('💡 Solución: Asegúrate que MySQL esté instalado y corriendo');
     }

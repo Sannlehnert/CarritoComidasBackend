@@ -4,11 +4,15 @@
   "description": "Backend para sistema de pedidos de carrito de comidas",
   "main": "src/index.js",
   "scripts": {
+    "prestart": "knex migrate:latest --env development",
     "start": "node src/index.js",
+    "predev": "knex migrate:latest --env development",
     "dev": "nodemon src/index.js",
     "migrate": "knex migrate:latest",
     "migrate:rollback": "knex migrate:rollback",
-    "migrate:make": "knex migrate:make"
+    "migrate:make": "knex migrate:make",
+    "db:setup": "knex migrate:latest",
+    "db:status": "knex migrate:status"
   },
   "dependencies": {
     "express": "^4.18.2",
