@@ -28,7 +28,7 @@ Pensado para funcionar tanto **en red local** como en la nube.
 - 🟢 Node.js
 - 🚀 Express
 - 📡 Socket.IO
-- 🗄️ MySQL / MariaDB
+- 🗄️ MySQL
 - 🔐 Validaciones básicas y control de errores
 
 ---
